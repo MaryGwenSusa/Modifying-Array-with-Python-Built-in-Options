@@ -28,4 +28,20 @@ def modifyArray():
         taskIndex=int(input("\x1b[00m\x1b[32mAt which position on the list would you like your number to appear? (considering 0 index)\x1b[00m \n >\x1b[34m "))
         array.insert(taskIndex, task)
         print(f'\x1b[45mUpdated List:\x1b[00m \x1b[93m{array}\x1b[00m')
+
+    elif askUser == 3:
+        newNumber=int(input("\x1b[00m\x1b[32mWhat number would you like to see on your list?\x1b[00m \n >\x1b[34m "))
+        indexes = len(array)
+        oldNumIndex=int(input(f"\x1b[00m\x1b[32mWhat position do you want your new number to be in (starting from index 0 to {indexes - 1})?\x1b[00m \n >\x1b[34m "))
+        array[oldNumIndex] = newNumber
+        print(f'\x1b[45mUpdated List:\x1b[00m \x1b[93m{array}\x1b[00m')
+
+    elif askUser == 4:
+        task = int(input("\x1b[00m\x1b[32mWhich number from the list would you like to remove?\x1b[00m \n >\x1b[34m "))
+        array.remove(task)
+        print(f'\x1b[45mUpdated List:\x1b[00m \x1b[93m{array}\x1b[00m')
+
+header()
+array = [6, 12, 8, 3, 34, 21, 67, 45, 16, 88]
+print(f"\x1b[45mMy List:\x1b[00m \x1b[93m{array}\x1b[00m")
  
